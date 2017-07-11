@@ -8,6 +8,9 @@ from repeval.corpus.lang import Lang
 from repeval.corpus.batch_iterator import BatchIterator
 from repeval.utils.io import save_pickle, load_pickle
 
+if constants.DATA_PATH == '':
+    raise Exception('DATA_PATH not set. Please set this variable in '
+                    'repeval/constants.py and rerun the script.')
 
 CORPUS_PATH = os.path.join(constants.DATA_PATH, "corpus")
 MULTINLI_CORPUS_PATH = os.path.join(CORPUS_PATH, "multinli_0.9")
