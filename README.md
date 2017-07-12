@@ -3,7 +3,7 @@
 
 This repo contains the code developed for the [RepEval 2017 Shared Task](https://repeval2017.github.io/shared/) by the the team Rivercorners.
 
-You can read our report "__Refining Raw Sentence Representations for Textual Entailment Recognition via Attention__" [here](https://www.arxiv.org).
+You can read our report "__Refining Raw Sentence Representations for Textual Entailment Recognition via Attention__" [here](https://arxiv.org/abs/1707.03103).
 
 ## Installation instructions
 
@@ -22,7 +22,7 @@ You can read our report "__Refining Raw Sentence Representations for Textual Ent
 9. Download the 840B 300d Glove embeddings from
    http://nlp.stanford.edu/data/glove.840B.300d.zip and extract the
    contents in `DATA_PATH/word_embeddings/`
-10. Make sure you have [pytorch](http://pytorch.org/) for python 2.7 installed in your environment (we used pytorch 0.1.12).
+10. Make sure you have [pytorch](http://pytorch.org/) for python 2.7 installed in your environment (we used pytorch 0.1.12)
 11. Also install the packages `tqdm` for displaying progress bars and `dataset` for interfacing with the sqlite database. You can run `pip install -r requirements.txt` to install them automatically
 12. Run the following command in the topmost directory of the package:
    `python run_inner_att_model.py` for training with default parameters
@@ -44,7 +44,7 @@ If you want to combine Stanford's SNLI corpus with the MultiNLI corpus follow th
 
     Note that they sampled from the SNLI corpus at each epoch while we only do it once before beginning the training procedure.
 
-4. Execute `python create_fullnli_dataset.py`. This will create the new directory `DATA_PATH/corpus/fullnli/` following structure similar to the original `DATA_PATH/corpus/multinli_0.9/`
+4. Execute `python create_fullnli_dataset.py`. This will create the new directory `DATA_PATH/corpus/fullnli/` following a structure similar to the original `DATA_PATH/corpus/multinli_0.9/`
 5. Once these steps are completed you can choose which corpus to use when running your experiments, e.g. `python run_inner_att_model.py --corpus FullNLICorpus`
 
 ## Dependencies
